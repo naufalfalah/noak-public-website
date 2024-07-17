@@ -7,18 +7,18 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Noak",
-  description: "The All-in-One Clinic and Doctor Management App",
+    title: "Noak",
+    description: "The All-in-One Clinic and Doctor Management App",
 };
 
 export default function RootLayout({
-  children,
+    children,
 }: Readonly<{
-  children: React.ReactNode;
+    children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
-  );
+    return (
+        <html lang="en">
+            <body className={inter.className}>{children}</body>
+        </html>
+    );
 }

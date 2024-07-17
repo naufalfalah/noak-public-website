@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { FaDatabase } from "react-icons/fa";
 
-import { getSection4 } from "@/data/section4"
+import { getSection4 } from "@/data/section4";
 
 const Section4 = () => {
     const section4Datas = getSection4();
@@ -10,12 +10,17 @@ const Section4 = () => {
     return (
         <section>
             <div className="container px-10 py-10 lg:py-20 mx-auto space-y-14 lg:space-y-0">
-
                 {/* Row */}
                 <div className="flex flex-col lg:flex-row items-center space-x-0 md:space-x-6 justify-between">
                     {/* Col 1 */}
                     <div className="flex items-center md:pb-12 lg:pb-0 w-2/3 lg:w-2/6">
-                        <Image src="/illustrations/security.svg" alt="security-illustration" width={500} height={500} className="w-full" />
+                        <Image
+                            src="/illustrations/security.svg"
+                            alt="security-illustration"
+                            width={500}
+                            height={500}
+                            className="w-full"
+                        />
                     </div>
 
                     {/* Col 2 */}
@@ -30,7 +35,7 @@ const Section4 = () => {
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
-                            {section4Datas.map(data => (
+                            {section4Datas.map((data) => (
                                 <div key={data.id} className="section__item flex items-start space-x-4">
                                     <div className="p-2">
                                         <FaDatabase className="text-secondary-600 text-2xl" />
@@ -44,10 +49,9 @@ const Section4 = () => {
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
-    )
-}
+    );
+};
 
-export default Section4
+export default Section4;
