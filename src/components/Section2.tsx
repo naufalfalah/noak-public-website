@@ -1,6 +1,6 @@
 import React from "react";
-import { FaDatabase } from "react-icons/fa";
 
+import Icon from "@/components/Icon";
 import { getSection2 } from "@/data/section2";
 
 const Section2 = () => {
@@ -22,7 +22,7 @@ const Section2 = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
                         {section2Datas.map((data) => (
                             <div key={data.id} className="space-y-5 p-8 bg-white rounded-xl shadow-custom-down h-full">
-                                <FaDatabase className="text-secondary-600 text-4xl" />
+                                <Icon name={data.icon} width={48} height={48} />
                                 <div className="space-y-3">
                                     <p className="section__item__title">{data.title}</p>
                                     <p className="section__item__description">{data.description}</p>

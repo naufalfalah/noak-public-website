@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import { FaDatabase } from "react-icons/fa";
+
+import Icon from "@/components/Icon";
 
 const Footer = () => (
     <footer>
@@ -20,7 +21,7 @@ const Footer = () => (
                 <div className="lg:w-1/3 space-y-3">
                     <div className="flex flex-col lg:flex-row items-center lg:items-start space-x-0 lg:space-x-4">
                         <div className="py-2">
-                            <FaDatabase className="text-primary text-xl" />
+                            <Icon name="frame_18" width={24} height={24} />
                         </div>
                         <div className="m-0 py-2 space-y-3">
                             <p>Noak Pte Ltd.</p>
@@ -29,7 +30,7 @@ const Footer = () => (
                     </div>
                     <div className="flex flex-col lg:flex-row items-center lg:items-start space-x-0 lg:space-x-4">
                         <div className="py-2">
-                            <FaDatabase className="text-primary text-xl" />
+                            <Icon name="frame_19" width={24} height={24} />
                         </div>
                         <div className="m-0 py-2">
                             <p>noak@noak.com</p>
@@ -37,7 +38,7 @@ const Footer = () => (
                     </div>
                     <div className="flex flex-col lg:flex-row items-center lg:items-start space-x-0 lg:space-x-4">
                         <div className="py-2">
-                            <FaDatabase className="text-primary text-xl" />
+                            <Icon name="frame_20" width={24} height={24} />
                         </div>
                         <div className="m-0 py-2">
                             <p>+65 00000000</p>

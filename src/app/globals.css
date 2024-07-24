@@ -12,6 +12,10 @@
   --color-secondary-600: #7A24E9;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--color-black-600);
   background: var(--color-white);

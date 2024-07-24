@@ -9,7 +9,9 @@ const Header = () => (
                     <Image src="/logo.svg" alt="Noak Logo" width={600} height={200} className="w-1/2 md:1/3 lg:w-1/6" />
                 </div>
                 <div className="flex justify-end w-1/2">
-                    <button className="button--primary">Book demo</button>
+                    <a href="#book-demo" className="button--primary">
+                        Book demo
+                    </a>
                 </div>
             </div>
         </div>

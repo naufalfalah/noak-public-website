@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
 
+import Icon from "@/components/Icon";
+
 const HeroSection = () => (
     <section>
         <div className="container px-10 py-16 mx-auto">
@@ -18,9 +20,10 @@ const HeroSection = () => (
                         </p>
                     </div>
                     <div className="flex space-x-2 md:space-x-6">
-                        <button type="button" className="button--primary">
+                        <a href="#book-demo" className="button--primary flex items-center justify-center">
+                            <Icon name="frame_21" width={24} height={24} />
                             &nbsp;&nbsp;Book demo
-                        </button>
+                        </a>
                         <button type="button" className="button--outline">
                             Learn more
                         </button>

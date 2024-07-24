@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import { FaDatabase } from "react-icons/fa";
 
+import Icon from "@/components/Icon";
 import { getSection1 } from "@/data/section1";
 
 const Section1 = () => {
@@ -30,7 +30,7 @@ const Section1 = () => {
                     <div className="flex flex-col lg:flex-row md:space-x-6 space-y-10 md:space-y-14 lg:space-y-0 justify-between">
                         {section1Datas.map((data) => (
                             <div key={data.id} className="flex flex-col items-center text-center space-y-5">
-                                <FaDatabase className="text-secondary-600 text-4xl" />
+                                <Icon name={data.icon} width={48} height={48} />
                                 <div className="space-y-3">
                                     <p className="section__item__title">{data.title}</p>
                                     <p className="section__item__description">{data.description}</p>
