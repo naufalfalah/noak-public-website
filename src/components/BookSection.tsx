@@ -1,7 +1,7 @@
 import React from "react";
 
+import EmailForm from "@/components/EmailForm";
 import Icon from "@/components/Icon";
-import PhoneNumberSelect from "@/components/PhoneNumberSelect";
 
 const BookSection = () => (
     <section id="book-demo">
@@ -39,25 +39,7 @@ const BookSection = () => (
                 {/* Col 2 */}
                 <div className="space-y-10 md:space-y-14 lg:space-y-0 lg:w-1/2">
                     <div className="p-10 bg-white rounded-xl shadow-custom-down">
-                        <form action="mailto:admin@noak.sg" method="post" className="space-y-6">
-                            <div className="flex flex-row space-x-4">
-                                <input type="text" className="input w-1/2" name="first_name" placeholder="First name" />
-                                <input type="text" className="input w-1/2" name="last_name" placeholder="Last name" />
-                            </div>
-                            <div>
-                                <input type="text" className="input w-full" name="company_name" placeholder="Company name" />
-                            </div>
-                            <div>
-                                <input type="text" className="input w-full" name="email" placeholder="Email address" />
-                            </div>
-                            <div className="flex flex-row space-x-4">
-                                <PhoneNumberSelect className="relative w-1/3" />
-                                <input type="text" className="input w-2/3" name="phone_number" placeholder="Phone number" />
-                            </div>
-                            <button type="submit" className="button--primary w-full">
-                                Book demo
-                            </button>
-                        </form>
+                        <EmailForm />
                     </div>
                 </div>
             </div>

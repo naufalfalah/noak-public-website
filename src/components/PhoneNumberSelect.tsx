@@ -1,8 +1,13 @@
 import React from "react";
-
 import { getCountryCode } from "@/data/country-code";
 
-const PhoneNumberSelect = ({ className }: { className: string }) => {
+interface PhoneNumberSelectProps {
+    className: string;
+    value: string;
+    onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
+}
+
+const PhoneNumberSelect: React.FC<PhoneNumberSelectProps> = ({ className, value, onChange }) => {
     const countryCodes = getCountryCode();
 
     return (
@@ -13,7 +18,7 @@ const PhoneNumberSelect = ({ className }: { className: string }) => {
             >
                 Country Code
             </label>
-            <select id="country_code" name="country_code" className="input w-full h-full">
+            <select id="country_code" name="countryCode" className="input w-full h-full" value={value} onChange={onChange}>
                 {countryCodes.map((country) => (
                     <option key={country.code} value={country.code}>
                         {country.code}
