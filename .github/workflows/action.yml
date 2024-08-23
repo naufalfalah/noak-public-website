@@ -31,11 +31,21 @@ jobs:
         run: npm run build
         
       - name: Upload Files via FTP
-        uses: peaceiris/actions-sftp-deploy@v1.0.0
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: out/
           server-dir: ${{ secrets.SERVER_DIR }}
-          protocol: sftp
+          port: 21
+          protocol: ftp
+          log-level: verbose
+          timeout: 120000
+
+          # ftp-server: ftp.naufalfalah.com
+          # ftp-username: test-noak@naufalfalah.com
+          # ftp-password: _I=Qf6cIAVph
+          # local-dir: out/
+          # remote-dir: /home/u1807002/public_html/noak.single-billing-event.com/
+          # port: 21
