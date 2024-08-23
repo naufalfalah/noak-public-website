@@ -29,6 +29,11 @@ jobs:
       
       - name: Build project
         run: npm run build
+
+      - name: Test FTP Connection
+        run: |
+          echo "Testing FTP connection"
+          nc -zv ${{ secrets.FTP_HOST }} 21
         
       - name: Upload Files via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
@@ -39,4 +44,4 @@ jobs:
           local-dir: out/
           server-dir: ${{ secrets.SERVER_DIR }}
           port: 21
-          protocol: ftps-legacy
+          protocol: ftp
