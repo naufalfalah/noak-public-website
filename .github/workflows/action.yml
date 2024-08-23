@@ -37,6 +37,6 @@ jobs:
           username: test-noak@naufalfalah.com
           password: _I=Qf6cIAVph
           local-dir: out/
-          server-dir: /home/u1807002/public_html/noak.single-billing-event.com
+          server-dir: /home/u1807002/public_html/noak.single-billing-event.com/
           port: 21
           protocol: ftp
