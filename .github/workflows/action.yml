@@ -31,11 +31,14 @@ jobs:
         run: npm run build
         
       - name: Upload Files via FTP
-        uses: SamKirkland/FTP-Deploy-Action@3.0.0
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          ftp-server: ftp.naufalfalah.com
-          ftp-username: test-noak@naufalfalah.com
-          ftp-password: _I=Qf6cIAVph
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
           local-dir: out/
-          remote-dir: /home/u1807002/public_html/noak.single-billing-event.com/
+          server-dir: ${{ secrets.SERVER_DIR }}
           port: 21
+          protocol: ftp
+          log-level: verbose
+          timeout: 60000
