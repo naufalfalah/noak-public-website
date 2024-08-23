@@ -37,4 +37,5 @@ jobs:
           ftp-username: test-noak@naufalfalah.com
           ftp-password: _I=Qf6cIAVph
           local-dir: out/
-          git-ftp-args: "--insecure --remote-root /home/u1807002/public_html/noak.single-billing-event.com/"
+          remote-dir: /home/u1807002/public_html/noak.single-billing-event.com/
+          port: 21
